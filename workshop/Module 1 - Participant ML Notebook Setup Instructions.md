@@ -12,7 +12,7 @@ These instructions configure the ML notebook environment needed to execute AI re
 > - Easier cleanup (stop / delete compute when finished)
 > If you still choose to run locally: (1) create a virtual env with Python >=3.10, (2) install dependencies matching the first install cell, (3) replicate the `.env` variables, and (4) ensure your identity or key-based auth has the same roles. Local runs may diverge from screenshots and are not the validated workshop path.
 
-\n## Launch VS Code Web
+## Launch VS Code Web
 Within the Azure ML workspace, on the Notebook tab, open VS Code Web.
 
 ![ML Notebook to VS Code Web](../images/1-MLNotebookToVSCWeb.png "ML Notebook to VS Code Web")
@@ -107,3 +107,4 @@ client = AzureOpenAI(
 Ensure your identity has the Cognitive Services OpenAI User role.
 
 ## Proceed to [Module 2: Run AI red team evaluations agent](./Module%202%20-%20Run%20AI%20red%20team%20evaluations%20agent.md)
+
