@@ -64,10 +64,30 @@ Be sure to review in the data directory the prompts.json , this where you can fu
 ![Loading custom prompts](../images/custompromptjson.png)
 
 As an example let's ask a Genrative AI to help produce some red teaming prompts specific to isolation and self harm for a health assistance application.
+
 ![Loading custom prompts](../images/custompromptinput.png)
 
 ## Review AI red team results
 
-1. Within Azure 
+> [!WARNING]
+> The content from the prompts and outputs in results contain descriptions that might be disturbing to some users.
+
+1. Go to the Azure AI Foundry project resource and launch Azure AI Studio.
+![Launch AI Foundry Project](../images/aiprojlaunch.png)
+
+2. In the left navigation go to the Evalauation and the AI red teaming tab
+![Goto AI Evaluations](../images/redteameval.png)
+
+3. Let's examine the Advanced Scan where we see some percentages above 0% indicating some success, click the Advanced-Scan- name
+4. Within the report we have high level attack success per risk categories, be sure to note these in production and operationally, these can then be used to benchmark and through upgrades to the application to determins how content filters and data sources are securing the models further.
+![Adv attack report](../images/redteamevaladv.png)
+
+5. Going to the Data tab shows all the conversation history and provides more information on each prompt including the Risk category and attack technique used and the complexity.
+6. Scroll to the botton and switch view to 100 results per page and scroll further to the top you will see some Attack successful, click on a view more of a Violence one
+![Adv attack report](../images/viladv.png)
+
+7. You will now see the prompt crafted using Red Team Eval library and Pyrit using attack techniques to deliver
+![Adv attack report](../images/viladvprev.png)
+
 
 ## Proceed to [Module 3: Examine AI evaluations and Defender alerts](./Module%203%20-%20Examine%20AI%20evaluations%20and%20Defender%20alerts.md)
