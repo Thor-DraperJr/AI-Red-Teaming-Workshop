@@ -1,6 +1,6 @@
 # Run AI red team evaluations agent
 
-> **Avg execution time (section): ~15 min**
+> **Avg execution time (section): ~25 min**
 
 These instructions cover running the remaining `AIRT.ipynb` cells where the AI Red Teaming Agent conducts basic, intermediate, advanced, and custom prompt attacks against the target model in your Azure AI project.
 
