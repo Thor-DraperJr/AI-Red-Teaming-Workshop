@@ -91,35 +91,21 @@ You should now see the ML compute selected and the first run succeeded (green ch
 ![First import success](../images/6-FirstImport.png)
 
 Continue executing the remaining setup cells. You may recieve an error that can **safley** be ignored
+
 ![Packages and imports](../images/cellinstallpip.png)
 
 ![Packages and imports](../images/7-PackageAndImport.png)
 
-During the device login step, copy the displayed code and complete authentication in the browser.
+During the login step, you should see a Managed Identity OK.
 
-![Device code credential login](../images/8-Credential.png)
+![Device code credential login](../images/loginmsi.png)
 
-A successful login appears as:
+Running the next step ensures the .env file is found and loaded properly, if needed adjust the pathing when variables do not load.
 
-![CLI interface after auth](../images/9-CliInterface.png)
-
-\n### Recommended auth (optional improvement)
-Instead of an API key, you can use Microsoft Entra ID credentials in code:
-
-```python
-from azure.identity import DefaultAzureCredential
-from azure.ai.openai import AzureOpenAI
-
-client = AzureOpenAI(
-  api_version="2024-12-01-preview",
-  azure_endpoint="https://<your-openai-account>.openai.azure.com/",
-  credential=DefaultAzureCredential()
-)
-```
-
-Ensure your identity has the Cognitive Services OpenAI User role.
+![Device code credential login](../images/loadenv.png)
 
 ## Proceed to [Module 2: Run AI red team evaluations agent](./Module%202%20-%20Run%20AI%20red%20team%20evaluations%20agent.md)
+
 
 
 
