@@ -17,7 +17,19 @@ Within the Azure ML workspace, on the Notebook tab, open VS Code Web.
 
 ![ML Notebook to VS Code Web](../images/1-MLNotebookToVSCWeb.png "ML Notebook to VS Code Web")
 
-## Create .env and populate information
+## (Script) Create .env and populate information
+1. Right click on generate-env.sh and Open in integrated Terminal
+![Create Env](../images/genenv.png)
+
+2. chmod the script and execute with a -g "Your AI Workshop Resource Group"
+![Create Env](../images/cmdexec.png)
+
+3. Authenticate using the URL link and Device code in the terminal
+
+4. Afterwards you should have a .env file created and populated
+![Create Env](../images/envcomplete.png)
+
+## (Alternate Manual) Create .env and populate information
 
 1. In VS Code, right‑click the user/admin folder and create a new file named `.env`.
 ![Create Env](../images/2-CreateEnv.png)
@@ -65,7 +77,7 @@ Tip: Replace placeholders only; keep quotes and avoid trailing spaces.
 
 > Note: Storage authentication now relies on Microsoft Entra ID (managed identity). If you need to verify or change it, see the prerequisites section in Module 2.
 
-\n## Execute installs, imports, and credential login
+## Execute installs, imports, and credential login
 Open the `AIRT.ipynb` file.
 
 ![Initial Install](../images/4-InitialInstall.png)
@@ -107,4 +119,5 @@ client = AzureOpenAI(
 Ensure your identity has the Cognitive Services OpenAI User role.
 
 ## Proceed to [Module 2: Run AI red team evaluations agent](./Module%202%20-%20Run%20AI%20red%20team%20evaluations%20agent.md)
+
 
