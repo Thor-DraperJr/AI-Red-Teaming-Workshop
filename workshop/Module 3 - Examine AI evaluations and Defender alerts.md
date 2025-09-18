@@ -14,7 +14,26 @@ Security alerting from Defender for AI Services can be found in the Azure AI Fou
 
 ## Defender for Cloud
 
+The security alert is also in Defneder for Cloud and in the left navigation Security Alerts. The alert itself contains some mor security context including aspects of the sucpicious prompt that triggered the alert. 
 
+![MDC Alert](../images/aifoundalert.png)
+
+![MDC Alert](../images/aifoundalertdetails1.png)
+
+Some of those ascpects include:
+
+- Mitre Tactics
+- IP address
+- Geo information
+- model invovled in attack.
+
+The Supporting Evidence and show events in the bottom right provider even more rich data can be found like:
+
+- Suscpicous prompt segemnt
+- User agent involved with browser or aapplication.
+- Confidence score
+
+![MDC Alert](../images/aifoundalertdetails2.png)
 
 ## Defender XDR alerting
 
