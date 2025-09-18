@@ -90,21 +90,22 @@ You should now see the ML compute selected and the first run succeeded (green ch
 
 ![First import success](../images/6-FirstImport.png)
 
-Continue executing the remaining setup cells. You may recieve an error that can **safley** be ignored
+Continue executing the remaining setup cells. You may receive an error that can **safely** be ignored.
 
 ![Packages and imports](../images/cellinstallpip.png)
 
 ![Packages and imports](../images/7-PackageAndImport.png)
 
-During the login step, you should see a Managed Identity OK.
+During the login step, you should see "Managed Identity OK".
 
 ![Device code credential login](../images/loginmsi.png)
 
-Running the next step ensures the .env file is found and loaded properly, if needed adjust the pathing when variables do not load.
+Running the next step ensures the .env file is found and loaded properly.  If needed, adjust the pathing when variables do not load.
 
 ![Device code credential login](../images/loadenv.png)
 
 ## Proceed to [Module 2: Run AI red team evaluations agent](./Module%202%20-%20Run%20AI%20red%20team%20evaluations%20agent.md)
+
 
 
 
