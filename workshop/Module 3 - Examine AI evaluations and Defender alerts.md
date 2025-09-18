@@ -27,13 +27,15 @@ Some of those ascpects include:
 - Geo information
 - model invovled in attack.
 
+![MDC Alert](../images/mdcalertdetails2.png)
+
 The Supporting Evidence and show events in the bottom right provider even more rich data can be found like:
 
 - Suscpicous prompt segemnt
 - User agent involved with browser or aapplication.
 - Confidence score
 
-![MDC Alert](../images/mdcalertdetails2.png)
+![MDC Alert](../images/mdcalertdetails3.png)
 
 ## Defender XDR alerting
 
