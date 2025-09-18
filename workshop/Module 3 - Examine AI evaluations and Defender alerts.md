@@ -31,7 +31,7 @@ Some of those ascpects include:
 
 The Supporting Evidence and show events in the bottom right provider even more rich data can be found like:
 
-- Suscpicous prompt segemnt
+- Suspicious prompt segemnt
 - User agent involved with browser or aapplication.
 - Confidence score
 
@@ -39,8 +39,18 @@ The Supporting Evidence and show events in the bottom right provider even more r
 
 ## Defender XDR alerting
 
-Finally the Defender for AI Services alerting is available in the Defender XDR portal, and can also be correlated with other suspicious or malicious activity around similar patterns. The following below shows a Jailbreak attempt as part of a correlated larger attack story. The same evidence and information is available.
+Finally the Defender for AI Services alerting is available in the Defender XDR portal, and can also be correlated with other suspicious or malicious activity around similar patterns. The following below shows a Jailbreak attempt as part of a correlated larger attack story. The same evidence and information is available in differnt tles as well including the same infromation in the Defender for Cloud alert like Prompt Suspicious Segment.
 
 ![XDR Alert](../images/xdralert.png)
 
 ## AI-SPM within Azure AI Foundry and Defender for Cloud
+
+Security Recommendations are also generated to reduce attack surfaces and harden Azure Services including Azure AI Foundry, these results can be found across areas relevant to different personas protecting the GenAI application. Agin this will include Azure AI Foundry Project -> Guardrails + controls -> Security Recommendations . By clicking on a recomendation you can get some additional details and a button to send you to more infromation found in Defender for Cloud.
+
+![AI recommendation](../images/aispmrec.png)
+
+and Defender for Cloud -> Recomendations
+
+![MDC recommendation](../images/mdcspmrec.png)
+
+Defender for Cloud will have additional context involving the MITRE Tactics involved with the attack surface. Any additional risk factors, and a top suggested active user for assignment for remediation.
