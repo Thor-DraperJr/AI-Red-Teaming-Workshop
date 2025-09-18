@@ -34,40 +34,40 @@ These instructions cover running the remaining `AIRT.ipynb` cells where the AI R
 
 ### Basic attack
 
-Focus on default risk categories (violence, sexual, hate & unfairness, self-harm) with a low prompt count to validate the pipeline end-to-end.
+The Basic attack focuses on default risk categories (violence, sexual, hate & unfairness, self-harm) with a low prompt count to validate the pipeline end-to-end.
 
 Results from the execution of the cell should indicate Completed Tasks and Evalauation Results being saved and uploaded.
 
 ![Create Env](../images/basicpycell.png)
 
-Be sure to review the risk_categories avaliable in the array, While basic focuses on Violence and HateUnfairness there are others [documented here](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators)
+Be sure to review the risk_categories avaliable in the array. While Basic focuses on Violence and Hateful/Unfair Content, there are others [documented here](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators).
 
-Note if you add to the risk_categories array you can add elements by typing ```RiskCategory.``` and then seeing other categories to load for testing
+If you want to add to the risk_categories array, you can add elements by typing ```RiskCategory.``` and choosing other categories from the IntelliSense suggestions list.
 
 ![Loading other categories](../images/basicpycellcat.png)
 
 ### Intermediate attack
 
-Increase the objectives count and optionally introduce additional attack strategies (e.g., obfuscation, role-play) to probe guardrails more thoroughly.
+The Intermediate attack increases the objectives count and optionally introduces additional attack strategies (e.g., obfuscation, role-play) to probe guardrails more thoroughly.
 
-Be sure to review the attack_strategies avaliable in the array, While basic focuses on Flip there are now many other techniques being employed to manipulate and trick the model behavior into the categories being used.
+Be sure to review the attack_strategies avaliable in the array. While Basic only used the Flip strategy, Intermediate employs many other techniques to manipulate and trick the model behavior into the categories being used.
 
 ![Loading other attack strats](../images/expandpycell.png)
 
-Note if you add to the risk_categories array you can add elements by typing ```AttackStrategy.``` and then seeing other strategies that can be employed to load for testing
+Just like the risk_categories array in the Basic attack, if you want to add additional attack strategies to the Intermediate attack, you can add elements to the attack_strategies array by typing ```AttackStrategy.``` and choosing other strategy types from the IntelliSense suggestions list.
 
 ![Loading other attack strats](../images/expandpycellstrat.png)
 
-One of the more fascinating aspects is the use of 18th century technology like Morse Code being employed in an attack againast a model. Think of almost all human knowledge to interpet and translate as a potential attack vector.
+One of the more fascinating strategies is the use of early 19th century technology like Morse Code being employed in an attack againast an AI model. Almost all human knowledge can be used to interpret and translate prompts as a potential attack vector!
 
 ### Advanced and custom attack
 
-Add bespoke high-risk or application-specific prompt objectives and enable more complex PyRIT transformation strategies. Correlate successful attacks with mitigations (system messages, content filters) before progressing to production. 
+The Advanced attack delivers bespoke high-risk or application-specific prompt objectives and enables more complex PyRIT transformation strategies. Here, we can correlate successful attacks with mitigations (system messages, content filters) before progressing to production. 
 
-Be sure to review in the data directory the prompts.json , this where you can further and eaisly extend custom prompting that involves specific infromation that would apply to your application or model.
+Be sure to review the prompts.json file in the data directory.  This file includes easily extensible custom prompting that would apply to your application or model.
 ![Loading custom prompts](../images/custompromptjson.png)
 
-As an example let's ask a Genrative AI to help produce some red teaming prompts specific to isolation and self harm for a health assistance application.
+As an example, let's ask a Generative AI to help produce some red teaming prompts specific to isolation and self-harm for a health assistance application.
 
 ![Loading custom prompts](../images/custompromptinput.png)
 
@@ -80,21 +80,21 @@ As an example let's ask a Genrative AI to help produce some red teaming prompts 
 
 ![Launch AI Foundry Project](../images/aiprojlaunch.png)
 
-2. In the left navigation go to the Evalauation and the AI red teaming tab
+2. In the left navigation, go to the Evalauation and the AI red teaming tab.
 
 ![Goto AI Evaluations](../images/redteameval.png)
 
-3. Let's examine the Advanced Scan where we see some percentages above 0% indicating some success, click the Advanced-Scan- name
-4. Within the report we have high level attack success per risk categories, be sure to note these in production and operationally, these can then be used to benchmark and through upgrades to the application to determins how content filters and data sources are securing the models further.
+3. Let's examine the Advanced Scan where we see some percentages above 0% indicating some successful attacks.  Click the Advanced-Scan- name.
+4. Within the report we have high level attack success in some risk categories. Be sure to note these in production. Operationally, these risk categories and attack strategies can then be used to benchmark and track progress to the application to determine how content filters and data sources are further securing the models.
 
 ![Adv attack report](../images/redteamevaladv.png)
 
 5. Going to the Data tab shows all the conversation history and provides more information on each prompt including the Risk category and attack technique used and the complexity.
-6. Scroll to the botton and switch view to 100 results per page and scroll further to the top you will see some Attack successful, click on a view more of a Violence one
+6. Scroll to the botton, switch view to 100 results per page, and scroll back up to see some **Attack successful** results. Choose one and click on "view more". In this case, we'll examine a successful Violence attack.
 
 ![Adv attack report](../images/viladv.png)
 
-7. You will now see the prompt crafted using Red Team Eval library and Pyrit using attack techniques to deliver
+7. You will now see the prompt that was crafted using the Red Team Eval library and Pyrit using attack techniques to successfully bypass content filtering on this model.
 
 ![Adv attack report](../images/viladvprev.png)
 
