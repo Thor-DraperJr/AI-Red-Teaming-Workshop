@@ -37,4 +37,8 @@ The Supporting Evidence and show events in the bottom right provider even more r
 
 ## Defender XDR alerting
 
+Finally the Defender for AI Services alerting is available in the Defender XDR portal, and can also be correlated with other suspicious or malicious activity around similar patterns. The following below shows a Jailbreak attempt as part of a correlated larger attack story. The same evidence and information is available.
+
+![XDR Alert](../images/xdralert.png)
+
 ## AI-SPM within Azure AI Foundry and Defender for Cloud
