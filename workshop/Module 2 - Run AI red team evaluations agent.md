@@ -36,11 +36,11 @@ These instructions cover running the remaining `AIRT.ipynb` cells where the AI R
 
 The Basic attack focuses on default risk categories (violence, sexual, hate & unfairness, self-harm) with a low prompt count to validate the pipeline end-to-end.
 
-Results from the execution of the cell should indicate Completed Tasks and Evalauation Results being saved and uploaded.
+Results from the execution of the cell should indicate Completed Tasks and Evaluation Results being saved and uploaded.
 
 ![Create Env](../images/basicpycell.png)
 
-Be sure to review the risk_categories avaliable in the array. While Basic focuses on Violence and Hateful/Unfair Content, there are others [documented here](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators).
+Be sure to review the risk_categories available in the array. While Basic focuses on Violence and Hateful/Unfair Content, there are others [documented here](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators).
 
 If you want to add to the risk_categories array, you can add elements by typing ```RiskCategory.``` and choosing other categories from the IntelliSense suggestions list.
 
@@ -50,7 +50,7 @@ If you want to add to the risk_categories array, you can add elements by typing 
 
 The Intermediate attack increases the objectives count and optionally introduces additional attack strategies (e.g., obfuscation, role-play) to probe guardrails more thoroughly.
 
-Be sure to review the attack_strategies avaliable in the array. While Basic only used the Flip strategy, Intermediate employs many other techniques to manipulate and trick the model behavior into the categories being used.
+Be sure to review the attack_strategies available in the array. While Basic only used the Flip strategy, Intermediate employs many other techniques to manipulate and trick the model behavior into the categories being used.
 
 ![Loading other attack strats](../images/expandpycell.png)
 
@@ -58,7 +58,7 @@ Just like the risk_categories array in the Basic attack, if you want to add addi
 
 ![Loading other attack strats](../images/expandpycellstrat.png)
 
-One of the more fascinating strategies is the use of early 19th century technology like Morse Code being employed in an attack againast an AI model. Almost all human knowledge can be used to interpret and translate prompts as a potential attack vector!
+One of the more fascinating strategies is the use of early 19th century technology like Morse Code being employed in an attack against an AI model. Almost all human knowledge can be used to interpret and translate prompts as a potential attack vector!
 
 ### Advanced and custom attack
 
@@ -80,7 +80,7 @@ As an example, let's ask a Generative AI to help produce some red teaming prompt
 
 ![Launch AI Foundry Project](../images/aiprojlaunch.png)
 
-2. In the left navigation, go to the Evalauation and the AI red teaming tab.
+2. In the left navigation, go to the Evaluation and the AI red teaming tab.
 
 ![Goto AI Evaluations](../images/redteameval.png)
 
@@ -90,13 +90,12 @@ As an example, let's ask a Generative AI to help produce some red teaming prompt
 ![Adv attack report](../images/redteamevaladv.png)
 
 5. Going to the Data tab shows all the conversation history and provides more information on each prompt including the Risk category and attack technique used and the complexity.
-6. Scroll to the botton, switch view to 100 results per page, and scroll back up to see some **Attack successful** results. Choose one and click on "view more". In this case, we'll examine a successful Violence attack.
+6. Scroll to the bottom, switch view to 100 results per page, and scroll back up to see some **Attack successful** results. Choose one and click on "view more". In this case, we'll examine a successful Violence attack.
 
 ![Adv attack report](../images/viladv.png)
 
 7. You will now see the prompt that was crafted using the Red Team Eval library and Pyrit using attack techniques to successfully bypass content filtering on this model.
 
 ![Adv attack report](../images/viladvprev.png)
-
 
 ## Proceed to [Module 3: Examine AI evaluations and Defender alerts](./Module%203%20-%20Examine%20AI%20evaluations%20and%20Defender%20alerts.md)

@@ -13,11 +13,13 @@ These instructions configure the ML notebook environment needed to execute AI re
 > If you still choose to run locally: (1) create a virtual env with Python >=3.10, (2) install dependencies matching the first install cell, (3) replicate the `.env` variables, and (4) ensure your identity or key-based auth has the same roles. Local runs may diverge from screenshots and are not the validated workshop path.
 
 ## Launch VS Code Web
+
 Within the Azure ML workspace, on the Notebook tab, open VS Code Web.
 
 ![ML Notebook to VS Code Web](../images/1-MLNotebookToVSCWeb.png "ML Notebook to VS Code Web")
 
 ## (Script) Create .env and populate information
+
 1. Right click on generate-env.sh and Open in integrated Terminal
 ![Create Env](../images/genenv.png)
 
@@ -78,6 +80,7 @@ Tip: Replace placeholders only; keep quotes and avoid trailing spaces.
 > Note: Storage authentication now relies on Microsoft Entra ID (managed identity). If you need to verify or change it, see the prerequisites section in Module 2.
 
 ## Execute installs, imports, and credential login
+
 Open the `AIRT.ipynb` file.
 
 ![Initial Install](../images/4-InitialInstall.png)
@@ -105,8 +108,3 @@ Running the next step ensures the .env file is found and loaded properly.  If ne
 ![Device code credential login](../images/loadenv.png)
 
 ## Proceed to [Module 2: Run AI red team evaluations agent](./Module%202%20-%20Run%20AI%20red%20team%20evaluations%20agent.md)
-
-
-
-
-

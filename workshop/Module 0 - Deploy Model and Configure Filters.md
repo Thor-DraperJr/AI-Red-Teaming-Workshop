@@ -5,6 +5,7 @@
 The following instructions are for deploying our first model to test in Azure AI Foundry and also configuring Content Filters and Prompt Shields.
 
 ## Azure AI Foundry Project
+
 1. In the Azure portal, locate the deployed Azure AI Foundry project resource in the resource group. Open it and click Launch AI Studio.
 ![Launch AI Project](../images/launchaiproject1.png "Launch AI Project")
 ![Launch AI Project Portal](../images/launchaiproject2.png "Launch AI Project Portal")
