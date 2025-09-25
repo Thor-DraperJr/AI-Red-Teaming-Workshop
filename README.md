@@ -19,10 +19,10 @@ This workshop deploys an Azure AI Foundry hub & project, a traditional Azure Mac
 ```bash
 az ad signed-in-user show --query id -o tsv
 ```
-  
-![Create Azure AI Foundry](./images/deploytemplatedirections.png)
 
 2. Ensure you deploy to East US 2 region, only a select few regions are supported [here](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent#region-support)
+
+![Create Azure AI Foundry](./images/deploytemplatedirections.png)
 
 ## Post‑Install Steps
 
