@@ -37,31 +37,5 @@ Be sure to apply the RBAC role to the *user* at the **Resource Group** scope. Th
 3. Edit the Access details. ![Update hub store 2](./images/updateaihubstore2.png)
 4. Change the authentication type from SAS to Microsoft Entra ID and click Save. ![Update hub store 3](./images/updateaihubstore3.png)
 5. Repeat for the other storage connection.
-6. Download from GitHub the [files folder](https://github.com/swiftsolves-msft/AI-Red-team-evaluations-workshop/tree/main/workshop/files) locally (used later in the Machine Learning workspace). ![Files to download](./images/filestodownload.png)
-7. Navigate to the Machine Learning workspace Azure resource and launch Studio. ![Launch ML Studio](./images/mlworkportal.png)
-8. In Machine Learning Studio, open the Notebooks blade and click Upload folder. ![Upload notebooks](./images/mlnotebook.png)
-9. Select and upload the `data` folder (with `prompts.json`) and the `AIRT.ipynb` notebook. ![Upload notebook](./images/mlnotebook2.png)
-10. Ensure the directory structure contains a `data` folder with `prompts.json` and the `AIRT.ipynb` notebook in the root. ![Notebook directory](./images/mlnotebook3.png)
-11. When opening `AIRT.ipynb`, authenticate if prompted in the upper-right corner. ![SDK auth 1](./images/authsdk.png) ![SDK auth 2](./images/authsdk2.png)
-
-### Recommended Authentication Approach
-
-While the notebook examples may show using an API key, prefer Microsoft Entra ID (formerly Azure AD) token-based auth (e.g., `DefaultAzureCredential`) for production or shared environments. Store secrets outside source control (e.g., Azure Key Vault) and avoid committing `.env`.
-
-If using the Azure OpenAI SDK in Python:
-
-```python
-from azure.identity import DefaultAzureCredential
-from azure.ai.openai import AzureOpenAI
-
-credential = DefaultAzureCredential()
-client = AzureOpenAI(
-    api_version="2024-12-01-preview",
-    azure_endpoint="https://<your-openai-account>.openai.azure.com/",
-    credential=credential
-)
-```
-
-Create a `.env.example` (not committed) for workshop convenience; then copy to `.env` locally.
 
 ## Proceed to [Module 0: Deploy Model and Configure Filters](./workshop/Module%200%20-%20Deploy%20Model%20and%20Configure%20Filters.md)
