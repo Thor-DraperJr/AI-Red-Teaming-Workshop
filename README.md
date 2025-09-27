@@ -38,4 +38,4 @@ Be sure to apply the RBAC role to the *user* at the **Resource Group** scope. Th
 4. Change the authentication type from SAS to Microsoft Entra ID and click Save. ![Update hub store 3](./images/updateaihubstore3.png)
 5. Repeat for the other storage connection.
 
-## Proceed to [Module 0: Deploy Model and Configure Filters](./workshop/Module%200%20-%20Deploy%20Model%20and%20Configure%20Filters.md)
+## Proceed to [AI Red Team workshop - Participants Guide](./workshop/material/AI%20Red%20Team%20workshop%20-%20Participants%20Guide.docx)
