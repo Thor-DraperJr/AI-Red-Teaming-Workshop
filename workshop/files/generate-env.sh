@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Minimal, non-interactive .env generator for workshop notebooks.
-# - Optional overrides: AZURE_RESOURCE_GROUP_NAME, AZURE_OPENAI_ACCOUNT_NAME
-# - Auto-discovers Cognitive Services (AIServices/OpenAI) accounts in current subscription
-# - Deterministic selection (no prompts):
-#     * RG with most qualifying accounts; tie -> alphanumeric
-#     * Account containing 'openai' (case-insensitive) preferred; tie -> alphanumeric
-# - Always overwrites existing .env (logs notice)
-# - Safe to drop onto Azure ML compute & run unattended.
-
 SCRIPT_NAME=$(basename "$0")
 OUTPUT_FILE=".env"
 
