@@ -1,69 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# generate-env.sh
-# Generate a .env file for the workshop given a resource group.
-# Requirements: az CLI logged in (az login), access to the target resource group.
-# Usage: ./scripts/generate-env.sh -g <resource-group> [-o output_file]
-# Defaults: output_file = .env in current working directory.
-
 SCRIPT_NAME=$(basename "$0")
 OUTPUT_FILE=".env"
-RESOURCE_GROUP=""
 
-usage() {
-  cat <<EOF
-${SCRIPT_NAME} - Generate workshop .env
-
-Usage: ${SCRIPT_NAME} -g <resource-group> [-o <output-file>]
-
-Options:
-  -g, --resource-group   (required) Resource group name that contains the deployment
-  -o, --output-file      Output file path for .env (default: ./.env)
-  -h, --help             Show this help
-
-Behavior:
-  * Derives project workspace name: <rg>-project
-  * Fetches subscription id
-  * Locates Cognitive Services (AIServices/OpenAI) account in the RG (prompts if multiple)
-  * Builds endpoint URL
-  * Retrieves API key (key1)
-  * Writes .env with fixed deployment variables
-
-Environment variables written:
-  AZURE_RESOURCE_GROUP_NAME
-  AZURE_PROJECT_NAME
-  AZURE_OPENAI_DEPLOYMENT_NAME (fixed: gpt-4o-mini)
-  AZURE_OPENAI_API_VERSION (fixed: 2024-12-01-preview)
-  AZURE_SUBSCRIPTION_ID
-  AZURE_OPENAI_ENDPOINT
-  AZURE_OPENAI_API_KEY
-
-EOF
-}
-
-# Parse arguments
-while [[ $# -gt 0 ]]; do
-  case "$1" in
-    -g|--resource-group)
-      RESOURCE_GROUP="$2"; shift 2 ;;
-    -o|--output-file)
-      OUTPUT_FILE="$2"; shift 2 ;;
-    -h|--help)
-      usage; exit 0 ;;
-    *)
-      echo "[ERROR] Unknown argument: $1" >&2
-      usage
-      exit 1
-      ;;
-  esac
-done
-
-if [[ -z "$RESOURCE_GROUP" ]]; then
-  echo "[ERROR] --resource-group (-g) is required" >&2
-  usage
-  exit 1
-fi
+echo "[INFO] ${SCRIPT_NAME} starting (non-interactive)" >&2
 
 # Pre-flight checks
 if ! command -v az >/dev/null 2>&1; then
@@ -84,43 +25,45 @@ fi
 
 echo "[INFO] Subscription: ${SUBSCRIPTION_ID}" >&2
 
-# Validate RG exists
-if ! az group show -n "$RESOURCE_GROUP" >/dev/null 2>&1; then
-  echo "[ERROR] Resource group '$RESOURCE_GROUP' not found" >&2
-  exit 2
-fi
+############# Auto-discovery #############
+OVERRIDE_RG=${AZURE_RESOURCE_GROUP_NAME:-}
+OVERRIDE_ACCOUNT=${AZURE_OPENAI_ACCOUNT_NAME:-}
 
-PROJECT_NAME="${RESOURCE_GROUP}-project"  # Retained for notebooks referencing project naming convention
+mapfile -t CS_RESOURCES < <(az resource list --resource-type Microsoft.CognitiveServices/accounts \
+  --query "[?kind=='AIServices'||kind=='OpenAI'].[resourceGroup,name]" -o tsv 2>/dev/null || true)
 
-# Find Cognitive Services account(s) (no jq dependency)
-ACCOUNT_NAMES=($(az resource list -g "$RESOURCE_GROUP" --resource-type Microsoft.CognitiveServices/accounts --query "[?kind=='AIServices'||kind=='OpenAI'].name" -o tsv))
-
-if [[ ${#ACCOUNT_NAMES[@]} -eq 0 ]]; then
-  echo "[ERROR] No Cognitive Services (AIServices/OpenAI) accounts found in RG" >&2
+if [[ ${#CS_RESOURCES[@]} -eq 0 ]]; then
+  echo "[ERROR] No AIServices/OpenAI accounts found in subscription." >&2
   exit 3
 fi
 
-SELECTED_ACCOUNT=""
-if [[ ${#ACCOUNT_NAMES[@]} -eq 1 ]]; then
-  SELECTED_ACCOUNT="${ACCOUNT_NAMES[0]}"
-  echo "[INFO] Using Cognitive Services account: ${SELECTED_ACCOUNT}" >&2
+if [[ -n "$OVERRIDE_RG" ]]; then
+  RESOURCE_GROUP="$OVERRIDE_RG"
 else
-  echo "Multiple Cognitive Services accounts found:" >&2
-  i=1
-  for acct in "${ACCOUNT_NAMES[@]}"; do
-    echo "  $i) $acct" >&2
-    i=$((i+1))
-  done
-  while true; do
-    read -rp "Select account [1-${#ACCOUNT_NAMES[@]}]: " choice
-    if [[ "$choice" =~ ^[0-9]+$ ]] && (( choice>=1 && choice<=${#ACCOUNT_NAMES[@]} )); then
-      SELECTED_ACCOUNT="${ACCOUNT_NAMES[$((choice-1))]}"
-      break
-    else
-      echo "Invalid selection." >&2
-    fi
-  done
+  RESOURCE_GROUP=$(printf '%s\n' "${CS_RESOURCES[@]}" | awk '{print $1}' | \
+    awk '{count[$1]++} END {for (c in count) print count[c], c}' | sort -k1,1nr -k2,2 | head -1 | awk '{print $2}')
 fi
+
+if ! az group show -n "$RESOURCE_GROUP" >/dev/null 2>&1; then
+  echo "[ERROR] Chosen resource group '$RESOURCE_GROUP' not found." >&2
+  exit 2
+fi
+
+PROJECT_NAME="${RESOURCE_GROUP}-project"
+
+if [[ -n "$OVERRIDE_ACCOUNT" ]]; then
+  SELECTED_ACCOUNT="$OVERRIDE_ACCOUNT"
+else
+  mapfile -t ACCOUNT_NAMES < <(printf '%s\n' "${CS_RESOURCES[@]}" | awk -v rg="$RESOURCE_GROUP" '$1==rg {print $2}' | sort -u)
+  if [[ ${#ACCOUNT_NAMES[@]} -eq 0 ]]; then
+    echo "[ERROR] No accounts found in selected RG '$RESOURCE_GROUP'." >&2
+    exit 3
+  fi
+  SELECTED_ACCOUNT=$(printf '%s\n' "${ACCOUNT_NAMES[@]}" | awk 'BEGIN{IGNORECASE=1} /openai/ {print; found=1} END{if(!found) exit 1}') || SELECTED_ACCOUNT="${ACCOUNT_NAMES[0]}"
+fi
+
+echo "[INFO] Selected Resource Group: ${RESOURCE_GROUP}" >&2
+echo "[INFO] Selected Account:       ${SELECTED_ACCOUNT}" >&2
 
 ENDPOINT="https://${SELECTED_ACCOUNT}.openai.azure.com/"
 
@@ -144,17 +87,10 @@ AZURE_OPENAI_API_KEY="${OPENAI_KEY}"
 EOF
 )
 
-# Write file (prompt if exists)
+# Write file (always overwrite silently for unattended use)
 if [[ -f "$OUTPUT_FILE" ]]; then
-  read -rp "File '$OUTPUT_FILE' exists. Overwrite? [y/N]: " ans
-  if [[ ! "$ans" =~ ^[Yy]$ ]]; then
-    echo "[INFO] Aborted overwrite." >&2
-    echo "----- .env content (not written) -----" >&2
-    echo "$ENV_CONTENT"
-    exit 0
-  fi
+  echo "[INFO] Overwriting existing $OUTPUT_FILE" >&2
 fi
-
 echo "$ENV_CONTENT" > "$OUTPUT_FILE"
 
 # Mask key for summary
