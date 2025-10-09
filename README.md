@@ -2,8 +2,11 @@
 
 This workshop deploys an environment for running the [Azure AI Red Teaming Agent](https://learn.microsoft.com/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) in a secure, managed setup.
 
+## Deploy the Main Template
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fswiftsolves-msft%2FAI-Red-Teaming-Workshop%2Fmain%2Fazuredeploy.json)
 
+## Deploy this Forked Template
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://raw.githubusercontent.com/Thor-DraperJr/AI-Red-Teaming-Workshop/refs/heads/main/azuredeploy.json)
 
 
 > Must be deployed in **East US 2** or another supported region for AI Red Teaming Agent.
