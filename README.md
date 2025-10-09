@@ -4,7 +4,7 @@ This workshop deploys an environment for running the [Azure AI Red Teaming Agent
 
 ## Introduction
 
-<a href="https://airtwork.blob.core.windows.net/$web/videos/airtwelcomevideo.mp4" target="_blank">Watch Introduction Video Here</a>
+<a href="https://airtwork.blob.core.windows.net/$web/videos/airtwelcomevideo.mp4" target="_blank"> Right Click and Open in New Tab Watch Introduction Video Here</a>
 
 ## Deployment
 
