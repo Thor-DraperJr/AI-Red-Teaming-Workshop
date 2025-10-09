@@ -4,7 +4,7 @@ This workshop deploys an environment for running the [Azure AI Red Teaming Agent
 
 ## Introduction
 
-<video src="[path/to/video.mp4](https://airtwork.blob.core.windows.net/$web/videos/airtwelcomevideo.mp4)" width="320" height="240" controls></video>
+<video src="https://airtwork.blob.core.windows.net/$web/videos/airtwelcomevideo.mp4" width="320" height="240" controls></video>
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fswiftsolves-msft%2FAI-Red-Teaming-Workshop%2Fmain%2Fazuredeploy.json)
 
