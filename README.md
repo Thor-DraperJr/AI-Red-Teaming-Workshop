@@ -6,6 +6,10 @@ This workshop deploys an environment for running the [Azure AI Red Teaming Agent
 
 <a href="https://airtwork.blob.core.windows.net/$web/videos/airtwelcomevideo.mp4" target="_blank">Watch Introduction Video Here</a>
 
+## PreReqs
+1. upload to cloud shell session in AZ CLI and run script [register_providers.sh](https://github.com/swiftsolves-msft/AI-Red-Teaming-Workshop/blob/main/register_providers.sh) to register provider types
+2. Turn on [Defender for AI Services](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-onboarding#enable-threat-protection-for-ai-services-1)
+
 ## Deployment
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fswiftsolves-msft%2FAI-Red-Teaming-Workshop%2Fmain%2Fazuredeploy.json)
