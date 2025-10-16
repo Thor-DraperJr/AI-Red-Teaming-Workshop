@@ -9,6 +9,7 @@ providers=(
     "Microsoft.CognitiveServices"
     "Microsoft.MachineLearningServices"
     "Microsoft.Authorization"
+    "Microsoft.OperationalInsights"
 )
 
 # Function to check and wait for provider registration
