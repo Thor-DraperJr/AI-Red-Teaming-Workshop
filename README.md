@@ -2,11 +2,24 @@
 
 This workshop deploys an environment for running the [Azure AI Red Teaming Agent](https://learn.microsoft.com/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) in a secure, managed setup.
 
-## Deploy the Main Template
+## Introduction
+
+<a href="https://airtwork.blob.core.windows.net/$web/videos/airtwelcomevideo.mp4" target="_blank">Watch Introduction Video Here</a>
+
+## Prerequisites
+
+1. Upload the repo (or just `register_providers.sh`) into an Azure Cloud Shell or your local AZ CLI environment and run `./register_providers.sh` to register the required resource providers.
+2. Turn on [Defender for AI Services](https://learn.microsoft.com/azure/defender-for-cloud/ai-onboarding#enable-threat-protection-for-ai-services-1) in the subscription that will host the workshop resources.
+
+## Deploy the Templates
+
+### Deploy the Main Template
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fswiftsolves-msft%2FAI-Red-Teaming-Workshop%2Fmain%2Fazuredeploy.json)
 
-## Deploy this Forked Template
+### Deploy this Forked Template
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FThor-DraperJr%2FAI-Red-Teaming-Workshop%2Fmain%2Fazuredeploy.json)
+
+## Deployment Guidance
 
 
 > Must be deployed in **East US 2** or another supported region for AI Red Teaming Agent.
