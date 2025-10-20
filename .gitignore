@@ -1,0 +1,12 @@
+# GitHub configuration (workflows, issue/pr templates, etc.)
+/.github/
+
+# Local VS Code workspace settings (keep personal editor prefs out of repo).
+/.vscode/
+
+# Ignore the entire references folder and everything inside it.
+# Using /references/ (instead of /references/*) also ignores nested directories cleanly.
+/references/
+
+# Root parameter file with real user object id (never commit)
+/azuredeploy.parameters.json
