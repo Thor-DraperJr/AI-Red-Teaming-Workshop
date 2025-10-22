@@ -14,4 +14,4 @@
  - [ ] Azure Subscription has capacity to deploy Azure AI Foundry in
        East US 2
        
- - [ ] Azure Subscription has Provider Types registered
+ - [ ] Azure Subscription has Provider Types registered [register_providers.sh can help here](https://raw.githubusercontent.com/swiftsolves-msft/AI-Red-Teaming-Workshop/refs/heads/main/register_providers.sh)
