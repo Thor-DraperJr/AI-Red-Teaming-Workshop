@@ -9,7 +9,7 @@
        on](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-onboarding#enable-threat-protection-for-ai-services-1)
        
  - [ ] Attendee has access to their own Azure Subscription and can
-       deploy resource to it
+       deploy resources to it
        
  - [ ] Azure Subscription has capacity to deploy Azure AI Foundry in
        East US 2
