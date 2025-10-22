@@ -22,4 +22,4 @@
 2. Obtain your current user's Microsoft Entra ID (AAD) Object ID using Cloud Shell (Bash). You will use this in the deployment parameter **User Object Id**. ```az ad signed-in-user show --query id -o tsv```
 3. Ensure you deploy to East US 2 region, only a select few regions are supported
 
-![Deploy](./images/deploytemplatedirections.png)
+![Deploy](/images/deploytemplatedirections.png)
