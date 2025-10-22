@@ -1,3 +1,5 @@
+# Azure AI Red Team Participant Guide
+
 ## Prerequisites to meet
 
  - [ ] Azure subscription is ideally in a Sandbox Management Group, with
