@@ -46,5 +46,10 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
   ## Launch VS Code Web
 
   1.	Open URL to:  https://ml.azure.com/workspaces and navigate to the Machine Learning workspace Azure resource by clicking the Name.
+ 
   ![Launch](/images/launchmlworkspace.png)
+
+  2. In Machine Learning Studio, Goto Compute , ensure the VM is running and launch VS Code Web
+
+  
 
