@@ -42,3 +42,9 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
    replicate the .env variables, and (4) ensure your identity or
    key-based auth has the same roles. Local runs may diverge from
    screenshots and are not the validated workshop path.
+
+  ## Launch VS Code Web
+
+  1.	Open URL to:  https://ml.azure.com/workspaces and navigate to the Machine Learning workspace Azure resource by clicking the Name.
+  ![Launch](/images/launchmlworkspace.png)
+
