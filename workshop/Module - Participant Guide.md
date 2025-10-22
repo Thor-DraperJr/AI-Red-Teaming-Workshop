@@ -25,6 +25,7 @@
 ![Deploy](/images/deploytemplatedirections.png)
 
 **Avg setup time: ~10 min**
+
 These instructions configure the ML notebook environment needed to execute AI red team evaluations from AIRT-AiHML.ipynb.
 Execution environment note: 
 
