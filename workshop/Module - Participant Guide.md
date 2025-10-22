@@ -20,5 +20,6 @@
 
 1. Be sure to create new Resource Group as part of the deployment
 2. Obtain your current user's Microsoft Entra ID (AAD) Object ID using Cloud Shell (Bash). You will use this in the deployment parameter **User Object Id**. ```az ad signed-in-user show --query id -o tsv```
-3. Ensure you deploy to East US 2 region, only a select few regions are supported [here](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent#region-support)
+3. Ensure you deploy to East US 2 region, only a select few regions are supported
+
 ![Deploy](./images/deploytemplatedirections.png)
