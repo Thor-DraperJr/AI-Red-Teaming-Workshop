@@ -84,12 +84,12 @@ Use a supported region for AI Red Teaming Agent (for example, East US 2). See th
 3. Run the generate-env.sh script to set up the Python environment variables.
 4. Run notebooks (e.g., `AIRT-AiHML.ipynb`) using the remote kernel on the provisioned compute instance.
 
+## Participants Guide
+
+Proceed to the [AI Red Team workshop - Participants Guide](./workshop/material/AI%20Red%20Team%20workshop%20-%20Participants%20Guide.docx)
+
 ## References
 
 - AI Red Teaming Agent docs: https://learn.microsoft.com/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent
 - Hub & project concepts: https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources
 - Observability & evaluations: https://learn.microsoft.com/azure/ai-foundry/concepts/observability
-
-## Participants Guide
-
-Proceed to the [AI Red Team workshop - Participants Guide](./workshop/material/AI%20Red%20Team%20workshop%20-%20Participants%20Guide.docx)
