@@ -31,7 +31,14 @@ Execution environment note:
 
 This workshop is intentionally designed to run the notebooks on the Azure Machine Learning compute instance that is deployed (remote Jupyter kernel), not your local laptop Python environment. Running on the managed compute ensures:
 
-•	Consistent, pre-provisioned VM size & dependencies across participants
-•	Managed identity & RBAC access to storage and project resources without exposing keys locally
-•	Isolation from local machine package/version conflicts
-•	Easier cleanup (stop / delete compute when finished) If you still choose to run locally: (1) create a virtual env with Python >=3.10, (2) install dependencies matching the first install cell, (3) replicate the .env variables, and (4) ensure your identity or key-based auth has the same roles. Local runs may diverge from screenshots and are not the validated workshop path.
+ - Consistent, pre-provisioned VM size & dependencies across
+   participants
+- Managed identity & RBAC access to storage and project resources
+   without exposing keys locally
+ - Isolation from local machine package/version conflicts
+- Easier cleanup (stop / delete compute when finished) If you still
+   choose to run locally: (1) create a virtual env with Python >=3.10,
+   (2) install dependencies matching the first install cell, (3)
+   replicate the .env variables, and (4) ensure your identity or
+   key-based auth has the same roles. Local runs may diverge from
+   screenshots and are not the validated workshop path.
