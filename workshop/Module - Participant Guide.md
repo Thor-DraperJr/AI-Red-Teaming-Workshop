@@ -84,15 +84,29 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 2. Authenticate using the URL link and Device code in the terminal
 3.	Afterwards you should have a .env file created and populated 
 
-![Launch](/env/runsh.png)
+![Launch](/images/runsh.png)
 
 ## Execute installs, imports, and credential login
 
 1. Open the AIRT-AiHML.ipynb file.
 
-![Launch](/env/airtnotebook.png)
+![Launch](/images/airtnotebook.png)
 
 2. Run the first install cell. A pop‑up prompts you to select the Python kernel (choose your compute instance).
+
+![Launch](/images/newkernel.png)
+
+3. You should now see the ML compute selected and the first run succeeded (green check mark). The top-right 'Select Kernel' indicator updates.
+
+![Launch](/images/cellrun.png)
+
+4. Continue executing the remaining setup cells. You may receive an error that can safely be ignored.
+
+![Launch](/images/error.png)
+
+![Launch](/images/import.png)
+
+5. 
 
   
 
