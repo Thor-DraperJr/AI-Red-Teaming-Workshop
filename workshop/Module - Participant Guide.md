@@ -51,5 +51,23 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 
 2. In Machine Learning Studio, Goto Compute , ensure the VM is running and launch VS Code Web
 
+![Launch](/images/launchvscodeweb.png)
+
+3. Allow Extension to use Remote and Authenticate
+
+![Launch](/images/allowext.png)
+
+4. Trust the Authors dialog box
+
+![Launch](/images/trust.png)
+
+5. Be sure to download the workshop files from GitHub and unzip and enter the Shared root folder into the workshop and drag *files* folder into the VS Code
+
+![Launch](/images/downloadzip.png)
+
+![Launch](/images/copyover.png)
+
+6. 
+
   
 
