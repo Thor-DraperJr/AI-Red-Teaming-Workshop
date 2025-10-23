@@ -137,3 +137,13 @@ These instructions cover running the remaining AIRT.ipynb cells where the AI Red
 - View AI Red Teaming results: https://learn.microsoft.com/azure/ai-foundry/how-to/view-ai-red-teaming-results
 - Observability & evaluation stages: https://learn.microsoft.com/azure/ai-foundry/concepts/observability#the-three-stages-of-genaiops-evaluation
 - Risk & safety evaluators: https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators
+
+## Workflow summary
+
+1.	Generate / specify attack objectives (risk categories, counts).
+2.	Launch AI Red Teaming Agent scan (PyRIT-powered) from the notebook.
+3.	Monitor scan progress (optional logging output).
+4.	Retrieve evaluation metrics (attack success rate, per-category breakdown).
+5.	Inspect conversation-level artifacts for successful vs. failed attacks.
+6.	Iterate with additional categories / custom prompts.
+
