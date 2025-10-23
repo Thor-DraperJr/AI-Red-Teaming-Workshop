@@ -176,3 +176,79 @@ Just like the risk_categories array in the Basic attack, if you want to add addi
 
 ![Launch](/images/attackstrat.png)
 
+One of the more fascinating strategies is the use of early 19th century technology like Morse Code being employed in an attack against an AI model. Almost all human knowledge can be used to interpret and translate prompts as a potential attack vector!
+
+### Advanced and custom attack
+
+The Advanced attack delivers bespoke high-risk or application-specific prompt objectives and enables more complex PyRIT transformation strategies. Here, we can correlate successful attacks with mitigations (system messages, content filters) before progressing to production.
+
+Be sure to review the prompts.json file in the data directory. This file includes easily extensible custom prompting that would apply to your application or model. 
+
+![Launch](/images/advattack.png)
+
+As an example, let's ask a Generative AI to help produce some red teaming prompts specific to isolation and self-harm for a health assistance application.
+
+![Launch](/images/promptresponse.png)
+
+### Review AI red team results
+
+# Warning
+The content from the prompts and outputs in scan results contain descriptions that might be disturbing to some users.
+
+1.	Go to the Azure AI Foundry project resource and launch Azure AI Studio.
+
+![Launch](/images/aiproj.png)
+
+2.	In the left navigation, go to the Evaluation and the AI red teaming tab.
+
+![Launch](/images/resultsoverview.png)
+
+3.	Let's examine the Advanced Scan where we see some percentages above 0% indicating some successful attacks. Click the Advanced-Scan- name.
+
+4.	Within the report we have high level attack success in some risk categories. Be sure to note these in production. Operationally, these risk categories and attack strategies can then be used to benchmark and track progress to the application to determine how content filters and data sources are further securing the models.
+
+![Launch](/images/asr.png)
+
+5.	Going to the Data tab shows all the conversation history and provides more information on each prompt including the Risk category and attack technique used and the complexity.
+6.	Scroll to the bottom, switch view to 100 results per page, and scroll back up to see some Attack successful results. Choose one and click on "view more". In this case, we'll examine a successful Violence attack.
+
+![Launch](/images/results.png)
+
+7.	You will now see the prompt that was crafted using the Red Team Eval library and Pyrit using attack techniques to successfully bypass content filtering on this model.
+
+![Launch](/images/jsonpreview.png)
+
+## Examine AI evaluations and Defender alerts
+
+**Avg review time: ~15 min**
+
+This guide provides instructions for examining the AI red teaming agent results across areas relevant to different personas protecting the GenAI application. One of the byproducts of running the AI red team agent is that it can produce security alerts due to it's attack strategy techniques employed on risk category content. Defender for AI Services will generate security alerts that can be found where the persona is.
+
+### Azure AI Foundry project red team evaluations
+
+Security alerting from Defender for AI Services can be found in the Azure AI Foundry Left navigation's blade, here the data analyst or application owner can find if an alert was recently issued and some basic information on the alert and affected resource, including some remediation steps. The user is invited to review the alert in more detail and evidence in Defender for Cloud.
+
+![Launch](/images/aialert.png)
+
+![Launch](/images/aialertdetails.png)
+
+### Defender for Cloud
+
+The security alert is also in Defender for Cloud and in the left navigation Security Alerts. The alert itself contains some mor security context including aspects of the suspicious prompt that triggered the alert.
+
+![Launch](/images/mdcalert.png)
+
+![Launch](/images/mdcalertdetails.png)
+
+Some of those aspects include:
+-	Mitre Tactics
+-	IP address
+-	Geo information
+-	model involved in attack.
+
+![Launch](/images/mdcalertdetailsaspect.png)
+
+The Supporting Evidence and show events in the bottom right provider even more rich data can be found like:
+-	Suspicious prompt segment
+-	User agent involved with browser or application.
+-	Confidence score
