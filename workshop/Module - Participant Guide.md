@@ -1,6 +1,6 @@
 # Azure AI Red Team Participant Guide
 
-## Prerequisites to meet
+# Prerequisites to meet
 
  - [ ] Azure subscription is ideally in a Sandbox Management Group, with
        less restrictive policies
@@ -16,13 +16,15 @@
        
  - [ ] Azure Subscription has Provider Types registered [register_providers.sh](https://raw.githubusercontent.com/swiftsolves-msft/AI-Red-Teaming-Workshop/refs/heads/main/register_providers.sh)  can help here, by running in Azure Cloud Shell session
 
-## PreDeploy Steps
+# PreDeploy Steps
 
 1. Be sure to create new Resource Group as part of the deployment
 2. Obtain your current user's Microsoft Entra ID (AAD) Object ID using Cloud Shell (Bash). You will use this in the deployment parameter **User Object Id**. ```az ad signed-in-user show --query id -o tsv```
 3. Ensure you deploy to East US 2 region, only a select few regions are supported
 
 ![Deploy](/images/deploytemplatedirections.png)
+
+# Participant ML Notebook Setup Instructions
 
 **Avg setup time: ~10 min**
 
@@ -106,7 +108,13 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 
 ![Launch](/images/import.png)
 
-5. 
+5.	During the login step, you should see "Managed Identity OK".
 
-  
+![Launch](/images/msi.png)
+
+6.	Running the next step ensures the .env file is found and loaded properly. If needed, adjust the pathing when variables do not load.
+
+![Launch](/images/loadenv.png)
+
+# Run AI red team evaluations agent
 
