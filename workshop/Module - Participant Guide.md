@@ -360,7 +360,7 @@ Going forward review material in workshop and
     - piloting a generative AI application, 
     - and in production or when new data sources or models change and come on board
 
-[Continue learning AI Red teaming](https://github.com/swiftsolves-msft/AI-Red-Teaming-Workshop/blob/main/workshop/Module Appendix - Learning further.md)
+[Continue learning AI Red teaming](https://github.com/swiftsolves-msft/AI-Red-Teaming-Workshop/blob/main/workshop/Module%20Appendix%20-%20Learning%20further.md)
 
 Special Thanks to:
 
