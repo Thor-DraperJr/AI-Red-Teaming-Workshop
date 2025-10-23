@@ -86,7 +86,7 @@ Use a supported region for AI Red Teaming Agent (for example, East US 2). See th
 
 ## Participants Guide
 
-Proceed to the [AI Red Team workshop - Participants Guide](./workshop/material/AI%20Red%20Team%20workshop%20-%20Participants%20Guide.docx)
+Proceed to the [AI Red Team workshop - Participants Guide](./workshop/Module%20-%20Participant%20Guide.md)
 
 ## References
 
