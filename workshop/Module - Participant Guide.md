@@ -132,8 +132,8 @@ These instructions cover running the remaining AIRT.ipynb cells where the AI Red
 
 ## Key Microsoft Documentation
 
-•	AI Red Teaming Agent overview (preview): https://learn.microsoft.com/azure/ai-foundry/concepts/ai-red-teaming-agent
-•	Run scans with the AI Red Teaming Agent: https://learn.microsoft.com/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent
-•	View AI Red Teaming results: https://learn.microsoft.com/azure/ai-foundry/how-to/view-ai-red-teaming-results
-•	Observability & evaluation stages: https://learn.microsoft.com/azure/ai-foundry/concepts/observability#the-three-stages-of-genaiops-evaluation
-•	Risk & safety evaluators: https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators
+- AI Red Teaming Agent overview (preview): https://learn.microsoft.com/azure/ai-foundry/concepts/ai-red-teaming-agent
+- Run scans with the AI Red Teaming Agent: https://learn.microsoft.com/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent
+- View AI Red Teaming results: https://learn.microsoft.com/azure/ai-foundry/how-to/view-ai-red-teaming-results
+- Observability & evaluation stages: https://learn.microsoft.com/azure/ai-foundry/concepts/observability#the-three-stages-of-genaiops-evaluation
+- Risk & safety evaluators: https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators
