@@ -161,3 +161,18 @@ Results from the execution of the cell should indicate Completed Tasks and Evalu
 Be sure to review the risk_categories available in the array. While Basic focuses on Violence and Hateful/Unfair Content, there are others [documented here](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators).
 
 If you want to add to the risk_categories array, you can add elements by typing RiskCategory. and choosing other categories from the IntelliSense suggestions list.
+
+![Launch](/images/riskcategory.png)
+
+### Intermediate attack
+
+The Intermediate attack increases the objectives count and optionally introduces additional attack strategies (e.g., obfuscation, role-play) to probe guardrails more thoroughly.
+
+Be sure to review the attack_strategies available in the array. While Basic only used the Flip strategy, Intermediate employs many other techniques to manipulate and trick the model behavior into the categories being used.
+
+![Launch](/images/intattack.png)
+
+Just like the risk_categories array in the Basic attack, if you want to add additional attack strategies to the Intermediate attack, you can add elements to the attack_strategies array by typing AttackStrategy. and choosing other strategy types from the IntelliSense suggestions list.
+
+![Launch](/images/attackstrat.png)
+
