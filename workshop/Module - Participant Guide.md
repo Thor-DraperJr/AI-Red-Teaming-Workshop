@@ -84,6 +84,15 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 2. Authenticate using the URL link and Device code in the terminal
 3.	Afterwards you should have a .env file created and populated 
 
+![Launch](/env/runsh.png)
+
+## Execute installs, imports, and credential login
+
+1. Open the AIRT-AiHML.ipynb file.
+
+![Launch](/env/airtnotebook.png)
+
+2. Run the first install cell. A pop‑up prompts you to select the Python kernel (choose your compute instance).
 
   
 
