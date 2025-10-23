@@ -73,7 +73,15 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 
 ![Launch](/images/openterminal.png)
 
-7. 
+7.	click on generate-env.sh
+
+## (Script) Create .env and populate information
+
+1. execute ```./generate-env.sh```
+
+![Launch](/images/runsh.png)
+
+2.   
 
   
 
