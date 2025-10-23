@@ -81,7 +81,9 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 
 ![Launch](/images/runsh.png)
 
-2.   
+2. Authenticate using the URL link and Device code in the terminal
+3.	Afterwards you should have a .env file created and populated 
+
 
   
 
