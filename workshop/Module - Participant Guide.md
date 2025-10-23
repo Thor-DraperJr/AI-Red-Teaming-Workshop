@@ -118,3 +118,22 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 
 # Run AI red team evaluations agent
 
+**Avg execution time (section): ~25 min**
+
+These instructions cover running the remaining AIRT.ipynb cells where the AI Red Teaming Agent conducts basic, intermediate, advanced, and custom prompt attacks against the target model in your Azure AI project.
+
+## Prerequisites
+
+1.	Azure AI project deployed (hub + project) with system‑assigned managed identity.
+2.	Default blob storage connection (workspaceblobstore) set to Microsoft Entra ID-based (see Module 1 if you need to toggle it). No SAS or account keys required.
+3.	OpenAI deployment (e.g., gpt-4o-mini) accessible with your identity (Cognitive Services OpenAI User role).
+4.	Python environment with azure-ai-evaluation[redteam] installed (done in earlier notebook cells).
+5.	Region supported for AI Red Teaming Agent (preview) – confirm your project region is in the current preview list.
+
+## Key Microsoft Documentation
+
+•	AI Red Teaming Agent overview (preview): https://learn.microsoft.com/azure/ai-foundry/concepts/ai-red-teaming-agent
+•	Run scans with the AI Red Teaming Agent: https://learn.microsoft.com/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent
+•	View AI Red Teaming results: https://learn.microsoft.com/azure/ai-foundry/how-to/view-ai-red-teaming-results
+•	Observability & evaluation stages: https://learn.microsoft.com/azure/ai-foundry/concepts/observability#the-three-stages-of-genaiops-evaluation
+•	Risk & safety evaluators: https://learn.microsoft.com/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators
