@@ -67,7 +67,13 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 
 ![Launch](/images/copyover.png)
 
-6. 
+![Launch](/images/copied.png)
+
+6. Right Click on *files* folder in Left Navigation pane, and click Open in Integrated terminal
+
+![Launch](/images/openterminal.png)
+
+7. 
 
   
 
