@@ -148,4 +148,16 @@ These instructions cover running the remaining AIRT.ipynb cells where the AI Red
 6.	Iterate with additional categories / custom prompts.
 
 # Warning
-<span style="color:red;">The content from the prompts and outputs in scan results contain descriptions that might be disturbing to some users.</span>
+The content from the prompts and outputs in scan results contain descriptions that might be disturbing to some users.
+
+### Basic attack
+
+The Basic attack focuses on default risk categories (violence, sexual, hate & unfairness, self-harm) with a low prompt count to validate the pipeline end-to-end.
+
+Results from the execution of the cell should indicate Completed Tasks and Evaluation Results being saved and uploaded.
+
+![Launch](/images/basicattack.png)
+
+Be sure to review the risk_categories available in the array. While Basic focuses on Violence and Hateful/Unfair Content, there are others [documented here](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation-evaluators/risk-safety-evaluators).
+
+If you want to add to the risk_categories array, you can add elements by typing RiskCategory. and choosing other categories from the IntelliSense suggestions list.
