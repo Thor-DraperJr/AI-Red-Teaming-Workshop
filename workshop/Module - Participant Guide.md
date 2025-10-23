@@ -318,3 +318,50 @@ Within the model catalog you can examine various attributes of models. Click "Br
 ![Launch](/images/createcontentfilter.png)
 
 7.	Name the content filter LowSafetyAITest, choose the connection created from the model deployment, then click Next.
+
+![Launch](/images/namefilter.png)
+
+8.	Adjust the input filters as shown. Set them to the lowest blocking level and turn OFF Prompt Shields, then click Next.
+
+![Launch](/images/adjustfilter1.png)
+
+You can learn more from the following Learn document: [Content filtering overview](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/content-filter?tabs=warning%2Cuser-prompt%2Cpython-new#risk-categories)
+
+9.	Adjust the output filters likewise. Set them to the lowest blocking level and turn OFF Prompt Shields, then click Next.
+
+![Launch](/images/adjustfilter2.png)
+
+10.	On the connection screen, check the gpt-4o-mini model name and click Next, then choose Replace.
+
+![Launch](/images/replace.png)
+
+11.	Scroll down and create the filter.
+
+![Launch](/images/createfilter.png)
+
+You will later create another content filter HighSafetyAITest by moving thresholds to the highest settings, turning ON Prompt Shields (block), and enabling the block list in output filters.
+
+With the content filter at the lowest settings and Prompt Shields OFF, you demonstrate more permissive model behavior and how deployments without additional guardrails can increase exposure across categories (e.g., hate, sexual, self-harm). This is for controlled educational red teaming only. Do not deploy production systems with these relaxed settings.
+
+Safety disclaimer: Use the relaxed filter configuration solely within this isolated workshop environment. Always restore stricter filters (HighSafetyAITest) or defaults before exposing endpoints beyond this exercise.
+
+# Conclusion
+
+We have now been through the stand up and usage of the AI Red teaming agent through a Jupyter Python Notebook targeting and evaluating certain risks categories with differing attack strategies. We explored the results of these attacks in AI Red team evaluations in Azure AI Foundry, the attack success rates, and details of unique and novel prompt attacks. Finally we explored the alerting and further security elements within Azure AI Foundry and Defender for Cloud and Defender XDR portals.
+
+Going forward review material in workshop and
+
+- Form a AI red team
+
+- Develop testing criteria using the risk categories, attack strategies, and custom prompts
+
+- Execute AI red teaming in the lifecycle process, 
+ - choosing a model, 
+ - piloting a generative AI application, 
+ - and in production or when new data sources or models change and come on board
+
+[Continue learning AI Red teaming](https://github.com/swiftsolves-msft/AI-Red-Teaming-Workshop/blob/main/workshop/Module Appendix - Learning further.md)
+
+Special Thanks to:
+
+Thor Draper, Nathan Swift, Stephen Revel, Daniel Bates, Matt Hanson
