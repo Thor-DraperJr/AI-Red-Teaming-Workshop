@@ -147,3 +147,5 @@ These instructions cover running the remaining AIRT.ipynb cells where the AI Red
 5.	Inspect conversation-level artifacts for successful vs. failed attacks.
 6.	Iterate with additional categories / custom prompts.
 
+# Warning
+<span style="color:red;">The content from the prompts and outputs in scan results contain descriptions that might be disturbing to some users.</span>
