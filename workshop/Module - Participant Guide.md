@@ -252,3 +252,69 @@ The Supporting Evidence and show events in the bottom right provider even more r
 -	Suspicious prompt segment
 -	User agent involved with browser or application.
 -	Confidence score
+
+![Launch](/images/mdcevidence.png)
+
+### Defender XDR alerting
+
+Finally the Defender for AI Services alerting is available in the Defender XDR portal, and can also be correlated with other suspicious or malicious activity around similar patterns. The following below shows a Jailbreak attempt as part of a correlated larger attack story. The same evidence and information is available in different tiles as well including the same information in the Defender for Cloud alert like Prompt Suspicious Segment.
+
+![Launch](/images/xdralert.png)
+
+### AI-SPM within Azure AI Foundry and Defender for Cloud
+
+Security Recommendations are also generated to reduce attack surfaces and harden Azure Services including Azure AI Foundry, these results can be found across areas relevant to different personas protecting the GenAI application. Again this will include Azure AI Foundry Project -> Guardrails + controls -> Security Recommendations. By clicking on a recommendation you can get some additional details and a button to send you to more information found in Defender for Cloud.
+
+![Launch](/images/aispm.png)
+
+and Defender for Cloud -> Recommendations
+
+![Launch](/images/mdcrec.png)
+
+Defender for Cloud will have additional context involving the MITRE Tactics involved with the attack surface. Any additional risk factors, and a top suggested active user for assignment for remediation.
+
+# Examine and configure filters rerun tests
+
+**Avg deployment time: 10 min**
+
+The following instructions are for deploying our first model to test in Azure AI Foundry and also configuring Content Filters and Prompt Shields.
+
+While deploying models in Azure AI Foundry from the model catalog will deploy a default filter that will protect against some harms, we recommend creating custom filters and tailoring for your risk tolerance and needs. The following will walk through these steps and also we encourage after applying to the model re running the AI Red Team to see the differences.
+
+![Launch](/images/nodefaults.png)
+
+### Azure AI Foundry Project
+
+1.	In the Azure portal, locate the deployed Azure AI Foundry project resource in the resource group. Open it and click Launch AI Studio.
+
+![Launch](/images/aiprojfind.png)
+
+![Launch](/images/launch.png)
+
+2.	In the left-hand navigation, select Model catalog
+
+![Launch](/images/modelcatalog.png)
+
+Within the model catalog you can examine various attributes of models. Click "Browse the leaderboards" and scroll to review leaderboards by scenario. Review Standard harmful behavior and other scenarios to understand relative safety posture (higher score = higher measured risk). Learn more: [Model leaderboards in Azure AI Foundry](https://ai.azure.com/doc/azure/ai-foundry/concepts/model-benchmarks?tid=b8f7636c-2e7b-476f-858c-93b63e87d81b)
+
+![Launch](/images/modeldash1.png)
+
+![Launch](/images/modeldash2.png)
+
+3.	In the upper left navigation trail, click on the project and switch to the foundry view:
+
+![Launch](/images/navigate.png)
+
+4.	In the left-hand navigation, select Model + Endpoint, you should see a gpt-4o-mini deployed with the lab
+
+![Launch](/images/gpt4omini.png)
+
+5.	In the left-hand navigation, select Guardrails + controls, then choose the Content filters tab.
+
+![Launch](/images/contentfiltertab.png)
+
+6.	Click Create a content filter.
+
+![Launch](/images/createcontentfilter.png)
+
+7.	Name the content filter LowSafetyAITest, choose the connection created from the model deployment, then click Next.
