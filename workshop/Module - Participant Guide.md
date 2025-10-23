@@ -356,7 +356,7 @@ Going forward review material in workshop and
 - Develop testing criteria using the risk categories, attack strategies, and custom prompts
 
  - Execute AI red teaming in the lifecycle process, 
-	   - choosing a model, 
+	- choosing a model, 
     - piloting a generative AI application, 
     - and in production or when new data sources or models change and come on board
 
