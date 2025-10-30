@@ -1,4 +1,5 @@
 
+# Debugger for Miscellaneous Errors around Blank Prompts and Advanced Scans
 
 ```python
 # Cell 11: Advanced scan + inline stderr ERROR capture (standardized naming & writable output dir)
