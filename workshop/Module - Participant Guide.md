@@ -28,7 +28,7 @@
 
 **Avg setup time: ~10 min**
 
-These instructions configure the ML notebook environment needed to execute AI red team evaluations from AIRT-AiHML.ipynb.
+These instructions configure the ML notebook environment needed to execute AI red team evaluations from AIRT-Eval.ipynb.
 Execution environment note: 
 
 This workshop is intentionally designed to run the notebooks on the Azure Machine Learning compute instance that is deployed (remote Jupyter kernel), not your local laptop Python environment. Running on the managed compute ensures:
@@ -90,7 +90,7 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 
 ## Execute installs, imports, and credential login
 
-1. Open the AIRT-AiHML.ipynb file.
+1. Open the AIRT-Eval.ipynb file.
 
 ![Launch](/images/airtnotebook.png)
 
@@ -120,7 +120,7 @@ This workshop is intentionally designed to run the notebooks on the Azure Machin
 
 **Avg execution time (section): ~25 min**
 
-These instructions cover running the remaining AIRT.ipynb cells where the AI Red Teaming Agent conducts basic, intermediate, advanced, and custom prompt attacks against the target model in your Azure AI project.
+These instructions cover running the remaining AIRT-Eval.ipynb cells where the AI Red Teaming Agent conducts basic, intermediate, advanced, and custom prompt attacks against the target model in your Azure AI project.
 
 ## Prerequisites
 
